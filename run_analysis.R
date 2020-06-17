@@ -88,6 +88,14 @@ str(combined_filter) #recheck
 
 
 #########################
+### STEP 3: STEP 3 is already done together at STEP 1 (above)
+
+
+
+
+
+
+#########################
 ### STEP 4: adding activity labels
 combined_filter$activitylabel <- factor(combined_filter$activity,
                                         labels = c("WALKING",
