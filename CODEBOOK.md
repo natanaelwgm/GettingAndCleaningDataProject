@@ -19,8 +19,92 @@ The dataset was adopted from the UCI HAR Dataset. The initial version contained 
 As well as inertia files for both testing and training dataset (but we will not delve into them)
 
 Initially, the dataset was quite messy and really hard to read. However, after a period of digesting the data, we can infer that there are similarities across the datasets contained in the data. Such similarities include:
-* The same number of columns in the training dataset with the number of rows in the features dataset (n = 561)  
-** From this I infer that the training (and testing) datasets will be named with column names contained in features  
-* Number of observations in the *subject_training* dataset matching the number of observation of the training (and testing) datasets (i.e., X_train, y_train, and subject_train)
-** From this I infer that we will add (or mutate) new variable (or column) horizontally.
+* The same number of columns in the training dataset with the number of rows in the features dataset (n = 561). From this I infer that the training (and testing) datasets will be named with column names contained in features  
+* Number of observations in the *subject_training* dataset matching the number of observation of the training (and testing) datasets (i.e., X_train, y_train, and subject_train). From this I infer that we will add (or mutate) new variable (or column) horizontally.
 
+All the steps for data manipulation was included in the run_analysis.R
+
+## The resulting dataset
+
+These are the processed dataset:
+* activitylabel
+* subject
+* tBodyAccmeanX
+* tBodyAccmeanY
+* tBodyAccmeanZ
+* tBodyAccstdX
+* tBodyAccstdY
+* tBodyAccstdZ
+* tGravityAccmeanX
+* tGravityAccmeanY
+* tGravityAccmeanZ
+* tGravityAccstdX
+* tGravityAccstdY
+* tGravityAccstdZ
+* tBodyAccJerkmeanX
+* tBodyAccJerkmeanY
+* tBodyAccJerkmeanZ
+* tBodyAccJerkstdX
+* tBodyAccJerkstdY
+* tBodyAccJerkstdZ
+* tBodyGyromeanX
+* tBodyGyromeanY
+* tBodyGyromeanZ
+* tBodyGyrostdX
+* tBodyGyrostdY
+* tBodyGyrostdZ
+* tBodyGyroJerkmeanX
+* tBodyGyroJerkmeanY
+* tBodyGyroJerkmeanZ
+* tBodyGyroJerkstdX
+* tBodyGyroJerkstdY
+* tBodyGyroJerkstdZ
+* tBodyAccMagmean
+* tBodyAccMagstd
+* tGravityAccMagmean
+* tGravityAccMagstd
+* tBodyAccJerkMagmean
+* tBodyAccJerkMagstd
+* tBodyGyroMagmean
+* tBodyGyroMagstd
+* tBodyGyroJerkMagmean
+* tBodyGyroJerkMagstd
+* fBodyAccmeanX
+* fBodyAccmeanY
+* fBodyAccmeanZ
+* fBodyAccstdX
+* fBodyAccstdY
+* fBodyAccstdZ
+* fBodyAccmeanFreqX
+* fBodyAccmeanFreqY
+* fBodyAccmeanFreqZ
+* fBodyAccJerkmeanX
+* fBodyAccJerkmeanY
+* fBodyAccJerkmeanZ
+* fBodyAccJerkstdX
+* fBodyAccJerkstdY
+* fBodyAccJerkstdZ
+* fBodyAccJerkmeanFreqX
+* fBodyAccJerkmeanFreqY
+* fBodyAccJerkmeanFreqZ
+* fBodyGyromeanX
+* fBodyGyromeanY
+* fBodyGyromeanZ
+* fBodyGyrostdX
+* fBodyGyrostdY
+* fBodyGyrostdZ
+* fBodyGyromeanFreqX
+* fBodyGyromeanFreqY
+* fBodyGyromeanFreqZ
+* fBodyAccMagmean
+* fBodyAccMagstd
+* fBodyAccMagmeanFreq
+* fBodyBodyAccJerkMagmean
+* fBodyBodyAccJerkMagstd
+* fBodyBodyAccJerkMagmeanFreq
+* fBodyBodyGyroMagmean
+* fBodyBodyGyroMagstd
+* fBodyBodyGyroMagmeanFreq
+* fBodyBodyGyroJerkMagmean
+* fBodyBodyGyroJerkMagstd
+* fBodyBodyGyroJerkMagmeanFreq
