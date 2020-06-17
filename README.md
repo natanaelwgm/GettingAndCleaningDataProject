@@ -1,6 +1,27 @@
 # GettingAndCleaningDataProject
 My repository for the assignment of Getting and Cleaning Data course at Coursera
 
+## How was the initial dataset?
+The dataset was adopted from the UCI HAR Dataset. The initial version contained the datasets such as:
+* features  
+* features_info  
+* activity_labels  
+* X_train  
+* X_test  
+* y_train  
+* y_test  
+* subject_test  
+* subject_train  
+* README  
+
+As well as inertia files for both testing and training dataset (but we will not delve into them).
+
+Initially, the dataset was quite messy and really hard to read. However, after a period of digesting the data, we can infer that there are similarities across the datasets contained in the data. Such similarities include:
+* The same number of columns in the training dataset with the number of rows in the features dataset (n = 561). From this I infer that the training (and testing) datasets will be named with column names contained in features  
+* Number of observations in the *subject_training* dataset matching the number of observation of the training (and testing) datasets (i.e., X_train, y_train, and subject_train). From this I infer that we will add (or mutate) new variable (or column) horizontally.
+
+All the steps for data manipulation was included in the run_analysis.R
+
 ## Assignment Description (from Coursera website)
 
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
