@@ -88,14 +88,6 @@ str(combined_filter) #recheck
 
 
 #########################
-### STEP 3: STEP 3 is already done together at STEP 1 (above)
-
-
-
-
-
-
-#########################
 ### STEP 4: adding activity labels
 combined_filter$activitylabel <- factor(combined_filter$activity,
                                         labels = c("WALKING",
@@ -123,6 +115,23 @@ combined_filter_melt <- melt(combined_filter,
 combined_filter_tidy <- dcast(combined_filter_melt,
                               activitylabel + subject ~ variable, mean)
 
-write.table(combined_filter_tidy, "./tidy_data.txt", row.names = FALSE, quote = FALSE)
+names(combined_filter_tidy) <- gsub("-", "", names(combined_filter_tidy))
+names(combined_filter_tidy) <- gsub("\\(", "", names(combined_filter_tidy))
+names(combined_filter_tidy) <- gsub(")", "", names(combined_filter_tidy))
+str(combined_filter_tidy)
+
+write.table(combined_filter_tidy, "./tidy_data.txt", row.names = FALSE, quote = FALSE) ## here is writing the data to tidy_text.txt
+
+
+
+
+## This part is only for me making easier bulleting in Github Codebook :D
+
+namesbullet <- names(combined_filter_tidy)
+namesbullet <- paste0("* ", namesbullet)
+namesbullet
+
+write.table(namesbullet, "./tidy_data_names.txt", row.names = FALSE, quote = FALSE)
+
 
 
